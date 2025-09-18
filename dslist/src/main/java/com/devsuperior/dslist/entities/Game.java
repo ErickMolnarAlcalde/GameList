@@ -22,8 +22,11 @@ public class Game {
     private Integer year;
     private String Genre;
     private String platform;
+    private double score;
     private String imgUrl;
+    @Column(columnDefinition = "Text")
     private String shortDescription;
+    @Column(columnDefinition = "Text")
     private String longDescription;
 
 
