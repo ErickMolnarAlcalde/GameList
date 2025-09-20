@@ -1,5 +1,6 @@
 package com.devsuperior.dslist.DTOs;
 
+import com.devsuperior.dslist.Projections.GameProjection;
 import com.devsuperior.dslist.entities.Game;
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
@@ -22,6 +23,14 @@ public class GameDTO {
         this.id = game.getId();
         this.shortDescription = game.getShortDescription();
         this.year = game.getYear();
+        this.title = game.getTitle();
+        this.imgUrl = game.getImgUrl();
+    }
+
+    public GameDTO(GameProjection game){
+        this.id = game.getId();
+        this.shortDescription = game.getShortDescription();
+        this.year = game.getgameYear();
         this.title = game.getTitle();
         this.imgUrl = game.getImgUrl();
     }

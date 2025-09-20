@@ -3,6 +3,7 @@ package com.devsuperior.dslist.Services;
 import com.devsuperior.dslist.DTOs.GameDTO;
 import com.devsuperior.dslist.DTOs.GameFullDTO;
 import com.devsuperior.dslist.DTOs.GameListDTO;
+import com.devsuperior.dslist.Projections.GameProjection;
 import com.devsuperior.dslist.Repositories.GameListRepository;
 import com.devsuperior.dslist.Repositories.GameRepository;
 import com.devsuperior.dslist.entities.Game;
@@ -32,6 +33,12 @@ public class GameService {
         Game game = gameRepository.findById(id).orElseThrow(() ->
                 new RuntimeException("ID não encontrado"));
         return new GameFullDTO(game);
+    }
+
+    public List<GameDTO> searchByList(Long listId){
+       List<GameProjection> gameProjection = gameRepository.searchByList(listId);
+       List<GameDTO> gameDTOS = gameProjection.stream().map(x->new GameDTO(x)).toList();
+       return gameDTOS;
     }
 
 
