@@ -30,7 +30,4 @@ public class Game {
     private String longDescription;
 
 
-
-
-
 }
