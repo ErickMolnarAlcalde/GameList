@@ -18,7 +18,21 @@ public class GameDTO {
 
     }
 
+    public GameDTO(Game game){
+        this.id = game.getId();
+        this.shortDescription = game.getShortDescription();
+        this.year = game.getYear();
+        this.title = game.getTitle();
+        this.imgUrl = game.getImgUrl();
+    }
 
+    public GameDTO(Long id, String shortDescription, Integer year, String title, String imgUrl) {
+        this.id = id;
+        this.shortDescription = shortDescription;
+        this.year = year;
+        this.title = title;
+        this.imgUrl = imgUrl;
+    }
 
     public Long getId() {
         return id;
