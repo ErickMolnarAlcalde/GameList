@@ -8,6 +8,7 @@ import com.devsuperior.dslist.Repositories.GameListRepository;
 import com.devsuperior.dslist.Repositories.GameRepository;
 import com.devsuperior.dslist.entities.Game;
 import com.devsuperior.dslist.entities.GameList;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

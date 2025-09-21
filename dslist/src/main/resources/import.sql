@@ -17,3 +17,11 @@ INSERT INTO tb_belonging (game_id, game_list_id, position) VALUES (2, 2, 1);
 INSERT INTO tb_belonging (game_id, game_list_id, position) VALUES (3, 3, 0);
 INSERT INTO tb_belonging (game_id, game_list_id, position) VALUES (3, 1, 0);
 INSERT INTO tb_belonging (game_id, game_list_id, position) VALUES (4, 4, 0);
+
+
+INSERT INTO tb_game (title, game_year, genre, platform, img_url, short_description, long_description, score) VALUES ('Super Mario Bros', 1985, 'Platform', 'NES', 'https://example.com/mario.jpg','Clássico de plataforma', 'Super Mario Bros é um jogo de plataforma desenvolvido pela Nintendo.', 0.0);
+
+INSERT INTO tb_game (title, game_year, genre, platform, img_url, short_description, long_description, score) VALUES ('Minecraft', 2011, 'Sandbox', 'PC', 'https://example.com/minecraft.jpg','Jogo sandbox', 'Minecraft é um jogo de construção em um mundo aberto feito pela Mojang.', 0.0);
+
+INSERT INTO tb_belonging (game_id, game_list_id, position) VALUES (5, 2, 2);
+INSERT INTO tb_belonging (game_id, game_list_id, position) VALUES (6, 2, 3);
